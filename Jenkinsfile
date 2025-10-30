@@ -25,6 +25,14 @@ pipeline {
                 }
             }
         }
+        stage('Afficher l\'heure') {
+            steps {
+                script {
+                    org.exemple.utils.MonUtilitaire.afficherHeure(this)
+                }
+            }
+        }
+
 
         stage('Appeler monEtapePersonnalisee') {
             steps {
